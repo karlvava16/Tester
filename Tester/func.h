@@ -6,14 +6,29 @@
 #include <Windows.h>
 using namespace std;
 
-struct Question		//структура вопросов
+struct Question		//Cтруктура вопросов
 {
 	wstring question;			//вопрос
 	wstring answers[4];			//возможные ответ
 	short answer_numb;			//правильный ответ
 };
 
-void SetFont(const wchar_t* Name);
+struct Test
+{
+	Question* questions;
+	size_t numberOfQuestions;
+	int correctAnswers;
+	int mark;
+};
+
+void SetFont(const wchar_t*);
+
+void InitTest(Test& test);
+void InitQuestionsARR(Question&, const size_t);
+void InitAnswersARR(Question&, const size_t);
+void InitCorrectAnswersARR(Question&, const size_t);
+
+
 
 void initQuestions		//Передача значений в структуру Qustion
 (
