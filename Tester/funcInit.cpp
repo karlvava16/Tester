@@ -18,6 +18,28 @@ void SetFont(const wchar_t* Name)
 	SetCurrentConsoleFontEx(GetStdHandle(STD_OUTPUT_HANDLE), 15, &f);
 }
 
+void InitTest(Test& test)
+{
+	InitQuestionsARR(test.questions, test.numberOfQuestions);
+	InitAnswersARR(test.questions, test.numberOfQuestions);
+	InitCorrectAnswersARR(test.questions, test.numberOfQuestions);
+}
+
+void InitQuestionsARR(Question* questions, const size_t numberOfQuestions)
+{
+
+}
+
+void InitAnswersARR(Question* questions, const size_t numberOfQuestions)
+{
+
+}
+
+void InitCorrectAnswersARR(Question* questions, const size_t numberOfQuestions)
+{
+
+}
+
 void initQuestions
 (
 	Question* q,
